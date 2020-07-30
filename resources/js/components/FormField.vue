@@ -32,6 +32,18 @@
             editorConfig() {
                 let cfg = this.defaultEditorConfig
                 let token = document.head.querySelector('meta[name="csrf-token"]').content
+                cfg.on = {
+                    afterPasteFromWord: function(evt){
+                        let str_match = evt.data['dataValue'].match(/<(\/?)([\S+]).*?>/g);
+                        if(str_match){
+                            for (let i = 0; i <= str_match.length -1; i++){
+                                let new_str = str_match[i].split(' ', 1);
+                                let last_str = new_str[0].indexOf('>') == -1 ? '>':'';
+                                evt.data['dataValue'] = evt.data['dataValue'].replace(str_match[i], new_str[0]+last_str);
+                            }
+                        }
+                    }
+                }
                 if (!!this.withFiles) {
                     cfg.filebrowserImageUploadUrl = `/nova-vendor/nova-ckeditor4-field/${
                     this.resourceName
