@@ -32,6 +32,7 @@
             editorConfig() {
                 let cfg = this.defaultEditorConfig
                 let token = document.head.querySelector('meta[name="csrf-token"]').content
+                cfg.contentsCss = '/nova-api/styles/nova-ckeditor'
                 cfg.on = {
                     afterPasteFromWord: function(evt){
                         let str_match = evt.data['dataValue'].match(/<(\/?)([\S+]).*?>/g);

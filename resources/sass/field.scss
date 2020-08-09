@@ -1,1 +1,26 @@
 // Nova Tool CSS
+.step {
+    margin-top: 10px;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #FFB03F;
+}
+
+.blockquote__content {
+    background: #EEF2FA;
+    padding: 10px 15px;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    color: #485065;
+    text-align: left;
+    line-height: 1.5;
+    margin-top: 0;
+
+    &--remind {
+        &:before {
+            content: '貼心小提醒：';
+            display: inline-block;
+        }
+    }
+}

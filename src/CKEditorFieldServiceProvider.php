@@ -27,6 +27,7 @@ class CKEditorFieldServiceProvider extends ServiceProvider
                 config('nova.ckeditor-field.ckeditor_url', 'https://cdn.ckeditor.com/4.14.0/full-all/ckeditor.js'));
 
             Nova::script('nova-ckeditor', __DIR__ . '/../dist/js/field.js');
+            Nova::style('nova-ckeditor', __DIR__ . '/../dist/css/field.css');
         });
 
         $this->publishes([
