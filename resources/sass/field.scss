@@ -24,3 +24,34 @@
         }
     }
 }
+
+.blockquote {
+    padding: 10px;
+    margin: 20px 0;
+    position: relative;
+
+    &:before {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: url('/images/icon_highlight-deco@3x.png') no-repeat 0 0/cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-image: url('/images/icon_highlight-deco@3x.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0 -30px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
