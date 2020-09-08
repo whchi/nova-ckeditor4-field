@@ -85,7 +85,7 @@
                     )
             },
         },
-        mounted() {
+        created() {
             CKEDITOR.plugins.addExternal('youtube', `${Nova.config.host}/js/ckeditor-plugins/youtube/plugin.js`)
         },
     }
