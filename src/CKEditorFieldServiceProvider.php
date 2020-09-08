@@ -28,6 +28,10 @@ class CKEditorFieldServiceProvider extends ServiceProvider
 
             Nova::script('nova-ckeditor', __DIR__ . '/../dist/js/field.js');
             Nova::style('nova-ckeditor', __DIR__ . '/../dist/css/field.css');
+
+            Nova::provideToScript([
+                'host' => config('app.url'),
+            ]);
         });
 
         $this->publishes([

@@ -84,6 +84,9 @@
                             ).toString(16)
                     )
             },
-        }
+        },
+        mounted() {
+            CKEDITOR.plugins.addExternal('youtube', `${Nova.config.host}/js/ckeditor-plugins/youtube/plugin.js`)
+        },
     }
 </script>
